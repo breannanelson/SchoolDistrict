@@ -2,8 +2,6 @@ CREATE DATABASE District_School_System;
 
 USE District_School_System;
 
-
-
 CREATE TABLE person (
 	
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
@@ -72,7 +70,6 @@ CREATE TABLE school (
 CREATE TABLE teacher (
 	
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    teahcerName VARCHAR(30) NOT NULL,
     gradeLevel INTEGER NOT NULL,
     personId INTEGER NOT NULL,
     schoolId INTEGER NOT NULL,
@@ -89,7 +86,6 @@ CREATE TABLE teacher (
 CREATE TABLE student (
 	
     id INTEGER AUTO_INCREMENT PRIMARY KEY,
-    studentName VARCHAR(30) NOT NULL,
     gradeLevel INTEGER NOT NULL,
     personId INTEGER NOT NULL,
     schoolId INTEGER NOT NULL,
