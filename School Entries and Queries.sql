@@ -57,3 +57,43 @@ VALUES
 		(4, 6, 1, 1);
         
         
+SELECT * FROM teacher;
+
+SELECT * FROM student;
+DELETE FROM student WHERE id = 4;
+
+UPDATE person SET phoneNum = '(714) 987-6725' WHERE id = 3;
+
+SELECT * FROM person;
+
+# Return all teachers first and last night
+SELECT person.firstName AS 'First Name', person.lastName AS 'Last Name' 
+FROM teacher INNER JOIN person ON teacher.personId = person.id;
+
+# Amount of students in the fourth grade
+SELECT COUNT(*)
+FROM student
+WHERE gradeLevel = 4;
+
+
+# Amount of students in the seventh grade
+SELECT COUNT(*)
+FROM student
+WHERE gradeLevel = 7;
+
+# Return all students names and the location and name of there school
+SELECT person.firstName AS 'First Name', 
+	   person.lastName AS 'Last Name',  
+       school.schoolName AS 'School Name', 
+       location.street, location.zip, 
+       location.state
+FROM ((person INNER JOIN student ON person.id = student.personId) 
+	 INNER JOIN location ON location.id = student.schoolId) 
+     INNER JOIN school ON school.locationId = location.id;
+
+
+
+
+
+
+
