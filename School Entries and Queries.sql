@@ -39,6 +39,21 @@ VALUES
 INSERT INTO 
 		 teacher (gradeLevel, personId, schoolId) 
 VALUES   
-		("Eastshore Elementary School", 1, 1);
+		(4, 5, 1);
         
 
+INSERT INTO 
+		 student (gradeLevel, personId, schoolId, teacherId) 
+VALUES   
+		(4, 2, 1, 1);
+        
+
+UPDATE student SET personId = 3 WHERE id = 1;
+
+
+INSERT INTO 
+		 student (gradeLevel, personId, schoolId, teacherId) 
+VALUES   
+		(4, 6, 1, 1);
+        
+        
