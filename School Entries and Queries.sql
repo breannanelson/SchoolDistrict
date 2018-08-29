@@ -81,8 +81,8 @@ SELECT COUNT(*)
 FROM student
 WHERE gradeLevel = 7;
 
-# Return all students names and the location and name of there school
-SELECT person.firstName AS 'First Name', 
+# Return all student's names and the names/locations of their schools
+SELECT person.firstName AS 'First Name',
 	   person.lastName AS 'Last Name',  
        school.schoolName AS 'School Name', 
        location.street, location.zip, 
